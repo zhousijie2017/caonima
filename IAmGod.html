@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俯视苍生...</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/jquery-jsonview/1.2.3/jquery.jsonview.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-jsonview/1.2.3/jquery.jsonview.js"></script>
+    <script type="text/javascript">
+    var jsondata = {
+        "code": 0,
+        "error": "",
+        "message": "你认识上帝吗？"
+    };
+    $(function() {
+        
+    });
+    function DoSomeTing() {
+        /* JSONView第一个参数就是需要转换的json数据 */
+        $("#data_info").JSONView(jsondata, { collapsed: false, nl2br: true, recursive_collapser: true });
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>人们通常会叫我的本名，但更多的人喜欢叫我上帝杰哥！</h2>
+        <h3>少年，把你知道的参数放进来吧</h3>
+        <input id="url" type="text" placeholder="URL" style="width:100%" />
+        <textarea id="postJson" rows="10" style="width:100%" placeholder="请求的报文"></textarea>
+        <button id="doSomeThing" onclick="DoSomeTing()">既然准备好了，那还犹豫什么呢？</button>
+    </div>
+    <hr/>
+    <div id="content-container" class="container" style="margin: 0 auto; width: 90%;">
+        <div id="data_info"></div>
+    </div>
+
+</body>
+
+</html>
